@@ -1,0 +1,218 @@
+{
+  "id": "63dace2a-75e6-460f-a568-1a04a094d677",
+  "version": "2.0",
+  "name": "Bloom",
+  "url": "http://bloomeditor.paylater.ng/login",
+  "tests": [{
+    "id": "14cc9722-70d5-4178-a834-762faa054407",
+    "name": "bloom_login",
+    "commands": [{
+      "id": "cba2fd04-1c55-48c7-b13b-6ca684bd44f6",
+      "comment": "",
+      "command": "open",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "18654a0c-864c-49d1-96c8-4c161a8d872a",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1280x800",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3261c964-3817-4a7f-8bd6-90302fe9f1aa",
+      "comment": "",
+      "command": "click",
+      "target": "css=li:nth-child(8) > a",
+      "targets": [
+        ["css=li:nth-child(8) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Login')]", "xpath:link"],
+        ["xpath=//div[@id='navbar']/div/ul/li[8]/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://bloomeditor.paylater.ng/login']", "xpath:href"],
+        ["xpath=//li[8]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0a2d2054-60ed-45ec-9e9c-33f375d7fb42",
+      "comment": "",
+      "command": "click",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//section[@id='contact']/div/div/div/div/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "95c97602-a20d-4ecf-8ae9-d093ea21b58a",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//section[@id='contact']/div/div/div/div/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "${email}"
+    }, {
+      "id": "7abe655c-02b4-441f-b351-76144274fdcb",
+      "comment": "",
+      "command": "click",
+      "target": "id=phone",
+      "targets": [
+        ["id=phone", "id"],
+        ["name=password", "name"],
+        ["css=#phone", "css:finder"],
+        ["xpath=//input[@id='phone']", "xpath:attributes"],
+        ["xpath=//section[@id='contact']/div/div/div/div/div/form/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c285c796-11b8-48bf-8238-c9c0ddec35ea",
+      "comment": "",
+      "command": "type",
+      "target": "id=phone",
+      "targets": [
+        ["id=phone", "id"],
+        ["name=password", "name"],
+        ["css=#phone", "css:finder"],
+        ["xpath=//input[@id='phone']", "xpath:attributes"],
+        ["xpath=//section[@id='contact']/div/div/div/div/div/form/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "${phone}"
+    }, {
+      "id": "cbddda4a-3c83-47c5-beb3-4a59d1e8382d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//section[@id='contact']/div/div/div/div/div/form/div[4]/button", "xpath:idRelative"],
+        ["xpath=//div[4]/button", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "31707db6-7a1c-4785-acb2-f467f8cd9019",
+    "name": "bloom_login_valid",
+    "commands": [{
+      "id": "64b3256a-0a28-4e72-b9ab-f7034fb8d35d",
+      "comment": "",
+      "command": "store",
+      "target": "prince@mailinator.com",
+      "targets": [],
+      "value": "email"
+    }, {
+      "id": "3effd244-b647-45e8-a99f-0a50ebf0f2ef",
+      "comment": "",
+      "command": "store",
+      "target": "12345678",
+      "targets": [],
+      "value": "phone"
+    }, {
+      "id": "18536416-94e3-446d-b8a6-7f912baf5419",
+      "comment": "",
+      "command": "run",
+      "target": "bloom_login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "42f82548-5b6c-4309-8ee6-a61f3d4311e7",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.text-left",
+      "targets": [
+        ["css=.text-left", "css:finder"],
+        ["xpath=//section[@id='contact']/div/div/h2", "xpath:idRelative"],
+        ["xpath=//h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'Welcome Prince princess')]", "xpath:innerText"]
+      ],
+      "value": "Welcome Prince princess"
+    }, {
+      "id": "1a7990c3-5325-476d-bd07-b28bf2c9bf69",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//section[@id='contact']/div/div/div/div/div/form/div[4]/button", "xpath:idRelative"],
+        ["xpath=//div[4]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7b3c5f0a-7cb2-49c4-96a1-64dbca4d8434",
+      "comment": "",
+      "command": "click",
+      "target": "css=.dropdown-item",
+      "targets": [
+        ["css=.dropdown-item", "css:finder"],
+        ["xpath=//a[contains(text(),'Logout')]", "xpath:link"],
+        ["xpath=//a[@onclick=\"event.preventDefault();\n                                                     document.getElementById('logout-form').submit();\"]", "xpath:attributes"],
+        ["xpath=//div[@id='navbar']/div/ul/li[8]/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://bloomeditor.paylater.ng/logout']", "xpath:href"],
+        ["xpath=//li[8]/a", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "415ca608-423a-427c-bee0-6f0b2ff169ce",
+    "name": "bloom_login_invalid",
+    "commands": [{
+      "id": "9427a5e7-6a68-4765-bc24-39fc1f5baa10",
+      "comment": "",
+      "command": "store",
+      "target": "ibiiroej@ndn",
+      "targets": [],
+      "value": "email"
+    }, {
+      "id": "6c4be02c-6894-4937-ad37-72f7f6bd4281",
+      "comment": "",
+      "command": "store",
+      "target": "2tyq3wgqgyqd",
+      "targets": [],
+      "value": "phone"
+    }, {
+      "id": "9fd529b4-b36d-4b37-a40c-988011b73751",
+      "comment": "",
+      "command": "run",
+      "target": "bloom_login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5fcf0f2d-f6c1-4246-8754-7c294769d537",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.signin-head-txt",
+      "targets": [
+        ["css=.signin-head-txt", "css:finder"],
+        ["xpath=//section[@id='contact']/div/div/div/div/div/form/h6", "xpath:idRelative"],
+        ["xpath=//h6", "xpath:position"],
+        ["xpath=//h6[contains(.,'Sign in to your account')]", "xpath:innerText"]
+      ],
+      "value": "Sign in to your account"
+    }]
+  }],
+  "suites": [{
+    "id": "d968ff47-b59b-40aa-abda-f013d7ae34c4",
+    "name": "Bloom",
+    "persistSession": false,
+    "parallel": true,
+    "timeout": 300,
+    "tests": ["31707db6-7a1c-4785-acb2-f467f8cd9019", "415ca608-423a-427c-bee0-6f0b2ff169ce"]
+  }],
+  "urls": ["https://bloom.getcarbon.co/", "http://bloomeditor.paylater.ng/", "https://id.heroku.com/login", "http://bloomeditor.paylater.ng/login"],
+  "plugins": [{
+    "id": "fbnkflkahhlmhdgkddaafgnnokifobik",
+    "name": "Applitools",
+    "version": "1.0.0"
+  }]
+}
